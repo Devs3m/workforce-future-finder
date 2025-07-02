@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, BookOpen } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 export function HeroSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="min-h-screen flex items-center bg-gradient-hero text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-black/20"></div>
@@ -21,7 +24,12 @@ export function HeroSection() {
               every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="group">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group"
+                onClick={() => navigate('/assessment')}
+              >
                 Start Career Assessment
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>

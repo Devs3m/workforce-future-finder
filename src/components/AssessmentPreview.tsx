@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Users, BookOpen, Briefcase } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const assessmentCategories = [
   {
@@ -28,6 +29,8 @@ const assessmentCategories = [
 ];
 
 export function AssessmentPreview() {
+  const navigate = useNavigate();
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -69,7 +72,12 @@ export function AssessmentPreview() {
               <p className="text-muted-foreground mb-6">
                 Complete all three modules to receive your comprehensive career report
               </p>
-              <Button variant="hero" size="lg" className="mb-4">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="mb-4"
+                onClick={() => navigate('/assessment')}
+              >
                 Begin Assessment
               </Button>
               <p className="text-sm text-muted-foreground">
