@@ -254,7 +254,11 @@ export default function AssessmentResults() {
                   </div>
                   
                   <div className="mt-6 pt-6 border-t text-center">
-                    <Button variant="default" className="mr-4">
+                    <Button 
+                      variant="default" 
+                      className="mr-4"
+                      onClick={() => navigate('/learning-resources')}
+                    >
                       Explore Learning Resources
                     </Button>
                     <Button variant="outline">
