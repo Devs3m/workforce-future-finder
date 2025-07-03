@@ -261,7 +261,10 @@ export default function AssessmentResults() {
                     >
                       Explore Learning Resources
                     </Button>
-                    <Button variant="outline">
+                    <Button 
+                      variant="outline"
+                      onClick={() => navigate('/career-consultation')}
+                    >
                       Schedule Career Consultation
                     </Button>
                   </div>
